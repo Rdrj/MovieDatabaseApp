@@ -1,0 +1,149 @@
+<!--
+  ~  Copyright 2018 Soojeong Shin
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Because we're using a preference fragments compat library, we need to add a theme -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <!-- Detail activity theme for translucent status bar -->
+    <style name="DetailTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Settings theme -->
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/blue_grey_500</item>
+        <item name="colorPrimaryDark">@color/blue_grey_dark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Because we're using a preference fragments compat library, we need to add a theme -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <!-- Style for Preference theme in the Settings -->
+    <style name="PreferenceThemeOverlay">
+        <item name="android:background">@color/card_background</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+    </style>
+
+    <!-- CardView style in the fragment_info.xml -->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_marginBottom">@dimen/margin_card_view</item>
+        <item name="android:layout_marginTop">@dimen/margin_card_view</item>
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardMaxElevation">@dimen/card_max_elevation</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <!-- TextView style for detail label in the fragment_info -->
+    <style name="OverviewLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+
+    <style name="DetailTextLabelStyle">
+        <item name="android:textColor">@color/blue_grey_200</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_activity_small</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+
+    <style name="CastTextLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_activity</item>
+        <item name="android:textColor">@color/blue_grey_200</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semi_bold</item>
+    </style>
+
+    <style name="DetailTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_detail</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BasicTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ViewAllTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/source_sans_pro_semi_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">@dimen/padding_activity_small</item>
+        <item name="android:paddingRight">@dimen/padding_activity_small</item>
+    </style>
+
+    <style name="EmptyTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:padding">@dimen/padding_activity_large</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <!-- Style for the message when no reviews found, no trailers found, offline -->
+    <style name="MessageTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@color/blue_grey_dark</item>
+        <item name="android:drawablePadding">@dimen/padding_activity</item>
+        <item name="android:fontFamily">@font/source_sans_pro_regular</item>
+        <item name="android:padding">@dimen/padding_activity_large</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_indicator</item>
+        <item name="tabSelectedTextColor">@color/color_tab_selected_text</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+    </style>
+
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/color_tab_text</item>
+    </style>
+
+</resources>
